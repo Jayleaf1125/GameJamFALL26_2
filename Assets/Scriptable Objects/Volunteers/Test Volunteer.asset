@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4cc3a1b7eb5b2448adbab9ea8b5c9ed, type: 3}
-  m_Name: Test Client
-  m_EditorClassIdentifier: Assembly-CSharp::ClientSO
+  m_Script: {fileID: 11500000, guid: ac88cd9d74e05ed40841564f13b3178b, type: 3}
+  m_Name: Test Volunteer
+  m_EditorClassIdentifier: Assembly-CSharp::VolunteerSO
   _name: 
-  _dialouge: {fileID: 0}
+  _portrait: {fileID: 0}
+  _sight: 0
+  _repair: 0
+  _speed: 0
+  _healing: 0
+  _burnout: 10
