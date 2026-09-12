@@ -1,18 +1,16 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Volunteer", menuName = "NPC/New Volunteer")]
 public class VolunteerSO : ScriptableObject
 {
-    [SerializeField] string _name;
-    [SerializeField] Image _portrait;
+    [field: SerializeField] public string Name { get; private set; }
+    [field: SerializeField] public Sprite Portrait { get; private set; }
     [Header("Stats")]
-    [Space(10)]
-    [SerializeField, Range(0, 3)] int _sight;
-    [SerializeField, Range(0, 3)] int _repair;
-    [SerializeField, Range(0, 3)] int _speed;
-    [SerializeField, Range(0, 3)] int _healing;
-    [Space(10)]
-    [SerializeField] float _burnout;
-    //[SerializeField] Quirk
+    [field: SerializeField, Range(0, 3)] public int Sight { get; private set; }
+    [field: SerializeField, Range(0, 3)] public int Repair { get; private set; }
+    [field: SerializeField, Range(0, 3)] public int Speed { get; private set; }
+    [field: SerializeField, Range(0, 3)] public int Healing { get; private set; }
+    [field: SerializeField] public float Burnout { get; private set; }
 }

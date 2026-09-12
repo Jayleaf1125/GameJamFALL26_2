@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    public static T instance { get; private set; }
+    public static T Instance { get; private set; }
 
     /// <summary>
     ///     Make sure this is called on override when inheriting this class
@@ -12,18 +12,18 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     /// 
     private protected virtual void Awake()
     {
-        if (instance != null && instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        instance = this as T;
+        Instance = this as T;
         DontDestroyOnLoad(gameObject);
     }
 
     private void OnDestroy()
     {
-        instance = null;
+        Instance = null;
     }
 }

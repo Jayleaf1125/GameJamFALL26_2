@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac88cd9d74e05ed40841564f13b3178b, type: 3}
-  m_Name: Test Volunteer
+  m_Name: Test Volunteer #1
   m_EditorClassIdentifier: Assembly-CSharp::VolunteerSO
-  _name: 
-  _portrait: {fileID: 0}
-  _sight: 0
-  _repair: 0
-  _speed: 0
-  _healing: 0
-  _burnout: 10
+  <Name>k__BackingField: Jason
+  <Portrait>k__BackingField: {fileID: -1387106866387353518, guid: ee6863076a77cad4294fc2ab81118b2e, type: 3}
+  <Sight>k__BackingField: 1
+  <Repair>k__BackingField: 2
+  <Speed>k__BackingField: 3
+  <Healing>k__BackingField: 2
+  <Burnout>k__BackingField: 10
