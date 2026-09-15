@@ -224,8 +224,9 @@ GameObject:
   - component: {fileID: -3559341902867911983}
   - component: {fileID: 2364678890879434963}
   - component: {fileID: -4656777810452352836}
+  - component: {fileID: -8726364604585208416}
   m_Layer: 5
-  m_Name: Test Card
+  m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,6 +324,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &-8726364604585208416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369201416026938653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4703c7841dc3dc44caf994196623e120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BurnoutSystem
 --- !u!1 &7601370461625170350
 GameObject:
   m_ObjectHideFlags: 0

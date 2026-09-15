@@ -30,8 +30,8 @@ public class CardPlacementSlot : MonoBehaviour, IDropHandler
 
     public void SubmitVolunteers()
     {
-        if (_selectedVolunteer == null) Debug.LogError("Missing a card");
+        if (_selectedVolunteer == null) return;
         JobManager.Instance.AddVolunteer(_selectedVolunteer);
-        Debug.Log("Cards are loaded");
+        //Debug.Log("Cards are loaded");
     }
 }
