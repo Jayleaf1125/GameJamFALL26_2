@@ -18,4 +18,5 @@ MonoBehaviour:
   <Repair>k__BackingField: 3
   <Speed>k__BackingField: 3
   <Healing>k__BackingField: 0
-  <Burnout>k__BackingField: 10
+  <Burnout>k__BackingField: 6
+  <CurrentBurnout>k__BackingField: 4

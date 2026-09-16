@@ -12,5 +12,11 @@ public class VolunteerSO : ScriptableObject
     [field: SerializeField, Range(0, 3)] public int Repair { get; private set; }
     [field: SerializeField, Range(0, 3)] public int Speed { get; private set; }
     [field: SerializeField, Range(0, 3)] public int Healing { get; private set; }
-    [field: SerializeField] public float Burnout { get; private set; }
+    [field: SerializeField, Range(0, 10)] public int Burnout { get; private set; }
+
+    [field: SerializeField] public int CurrentBurnout { get; private set; } = 0;
+
+    public void ResetBurnout() => CurrentBurnout = 0;
+    public void IncreaseBurnout(int num) => CurrentBurnout += num;
+    public void DecreaseBurnout() => CurrentBurnout -= 2;
 }

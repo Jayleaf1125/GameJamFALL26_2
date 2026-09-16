@@ -6,7 +6,7 @@ using TMPro;
 
 public class CardGenerator : MonoBehaviour
 {
-    [SerializeField] List<VolunteerSO> _listOfVolunteers;
+    [field: SerializeField] public List<VolunteerSO> ListOfVolunteers { get; private set; }
     [SerializeField] GameObject _canvas;
     [SerializeField] GameObject _cardPrefab;
     [SerializeField] RectTransform _playerHand;
@@ -18,9 +18,15 @@ public class CardGenerator : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        foreach (VolunteerSO v in  _listOfVolunteers)
+
+        _prevCardPosX = _cardSpawn.position.x;
+
+        foreach (VolunteerSO v in  ListOfVolunteers)
         {
-            GameObject card = Instantiate(_cardPrefab, _playerHand);
+            // Reset Burnout
+            v.ResetBurnout();
+
+            GameObject card = Instantiate(_cardPrefab);
             // Card Image
             card.transform.GetChild(1).GetComponent<Image>().sprite = v.Portrait;
             // Card Name
