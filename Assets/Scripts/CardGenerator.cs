@@ -9,6 +9,7 @@ public class CardGenerator : MonoBehaviour
     [field: SerializeField] public List<VolunteerSO> ListOfVolunteers { get; private set; }
     [SerializeField] GameObject _canvas;
     [SerializeField] GameObject _cardPrefab;
+    ////[SerializeField] Transform _cardSpawn;
     [SerializeField] RectTransform _playerHand;
 
     float _prevCardPosX;
@@ -19,7 +20,7 @@ public class CardGenerator : MonoBehaviour
     void Start()
     {
 
-        _prevCardPosX = _cardSpawn.position.x;
+        _prevCardPosX = _playerHand.position.x;
 
         foreach (VolunteerSO v in  ListOfVolunteers)
         {
