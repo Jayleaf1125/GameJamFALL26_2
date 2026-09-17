@@ -27,7 +27,7 @@ public class CardGenerator : MonoBehaviour
             // Reset Burnout
             v.ResetBurnout();
 
-            GameObject card = Instantiate(_cardPrefab);
+            GameObject card = Instantiate(_cardPrefab, _playerHand);
             // Card Image
             card.transform.GetChild(1).GetComponent<Image>().sprite = v.Portrait;
             // Card Name
