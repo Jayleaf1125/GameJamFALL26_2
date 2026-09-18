@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cc3a1b7eb5b2448adbab9ea8b5c9ed, type: 3}
+  m_Name: Test Client 4
+  m_EditorClassIdentifier: Assembly-CSharp::ClientSO
+  <Name>k__BackingField: Wilbert
+  <Dialouge>k__BackingField: {fileID: 11400000, guid: c4b3d8cd2c9b7ce49ba9a9e37577c5d5, type: 2}
+  <Portrait>k__BackingField: {fileID: 21300000, guid: 23e06e7e5f0e97f4cb7578ed7017571a, type: 3}
+  EventStatDict:
+    _serializedList:
+    - Key: 2
+      Value: 3

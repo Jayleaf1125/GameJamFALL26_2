@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VolunteerDetailsDisplay : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _volunteerName;
+    [SerializeField] Image _volunteerPotrait;
     [SerializeField] TextMeshProUGUI _volunteerSightStat;
     [SerializeField] TextMeshProUGUI _volunteerRepairStat;
     [SerializeField] TextMeshProUGUI _volunteerHealingStat;
@@ -35,6 +37,7 @@ public class VolunteerDetailsDisplay : MonoBehaviour
     public void UpdateVolunteerDetailsDisplay(VolunteerSO volunteer)
     {
         _volunteerName.text = volunteer.Name;
+        _volunteerPotrait.sprite = volunteer.Portrait;
         _volunteerSightStat.text = $"Sight: {volunteer.Sight}";
         _volunteerRepairStat.text = $"Repair: {volunteer.Repair}";
         _volunteerHealingStat.text = $"Healing: {volunteer.Healing}";

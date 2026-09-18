@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879cd5ce7465997489b1f7e721a6355d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialougeManager
-  currrentDialouge: {fileID: 11400000, guid: 61c7a2d4e809eae4e8c8f77767cea6ac, type: 2}
-  dialougeText: {fileID: 0}
-  dialougeName: {fileID: 0}
-  btnText: {fileID: 0}
-  dialougeImage: {fileID: 0}
+  _currrentDialouge: {fileID: 11400000, guid: 61c7a2d4e809eae4e8c8f77767cea6ac, type: 2}
+  _dialougeText: {fileID: 0}
+  _dialougeName: {fileID: 0}
+  _btnText: {fileID: 0}
+  _dialougeImage: {fileID: 0}

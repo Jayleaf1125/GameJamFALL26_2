@@ -1,14 +1,16 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class JobManager : Singleton<JobManager>
 {
     [field: SerializeField] public List<VolunteerSO> SelectedVolunteers { get; private set; } = new List<VolunteerSO>();
     [field: SerializeField] public List<ClientSO> SelectedClients { get; private set; } = new List<ClientSO>();
+
+    public static event Action OnStartAssignment = delegate { };
+
+    [SerializeField] TextMeshProUGUI _statusText;
 
     //public static event Action OnSelectedVolunteerSubmit = delegate { };
     bool _isSubmitted = false;
@@ -85,14 +87,33 @@ public class JobManager : Singleton<JobManager>
 
         if (volunteerProgressRate >= totalNumOfStatsForEvent)
         {
+            // If Successful
+            _statusText.text = "Successful";
+            _statusText.color = Color.green;
             foreach (VolunteerSO v in SelectedVolunteers) v.IncreaseBurnout(1);
+            DialougeManager.Instance.SetDialougePrefabActive(true);
+            DialougeManager.Instance.SetMainAreaPrefabActive(false);
+            EndAssignment();
         }
         else
         {
+            // If Unsuccessful
+            _statusText.text = "Unsuccessful";
+            _statusText.color = Color.red;
             foreach (VolunteerSO v in SelectedVolunteers) v.IncreaseBurnout(2);
         }
 
-        ClearVolunteers();
+  
 
     }
+    void EndAssignment()
+    {
+        _statusText.color = Color.white;
+        _statusText.text = "";
+        if (SelectedClients.Count > 0) SelectedClients.RemoveAt(0);
+        MainGameManager.Instance.EndRound(SelectedVolunteers);
+        DialougeManager.Instance.SetNewDialouge(SelectedClients[0].Dialouge);
+        ClearVolunteers();
+    }
+
 }

@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Volunteer", menuName = "NPC/New Volunteer")]
 public class VolunteerSO : ScriptableObject
@@ -15,8 +13,10 @@ public class VolunteerSO : ScriptableObject
     [field: SerializeField, Range(0, 10)] public int Burnout { get; private set; }
 
     [field: SerializeField] public int CurrentBurnout { get; private set; } = 0;
+    [field: SerializeField] public bool IsResting{ get; private set; } = true;
 
     public void ResetBurnout() => CurrentBurnout = 0;
     public void IncreaseBurnout(int num) => CurrentBurnout += num;
     public void DecreaseBurnout() => CurrentBurnout -= 2;
+    public void SetIsResting(bool isResting) => IsResting = isResting;
 }

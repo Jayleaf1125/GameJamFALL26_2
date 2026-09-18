@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 
@@ -10,7 +9,7 @@ public class CardGenerator : MonoBehaviour
     [SerializeField] GameObject _canvas;
     [SerializeField] GameObject _cardPrefab;
     ////[SerializeField] Transform _cardSpawn;
-    [SerializeField] RectTransform _playerHand;
+    public RectTransform _playerHand;
 
     float _prevCardPosX;
 
@@ -36,6 +35,8 @@ public class CardGenerator : MonoBehaviour
             card.GetComponent<Card>().SetVolunteer(v);
         }
     }
+
+    public RectTransform GetPlayerHandPos() => _playerHand;
 
     // Update is called once per frame
     void Update()
