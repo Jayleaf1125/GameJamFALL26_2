@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4946147f2a2d4c449f7accdd87fd299, type: 3}
-  m_Name: ConvoOne_4
+  m_Name: ConvoThree3
   m_EditorClassIdentifier: Assembly-CSharp::DialougeSO
-  dialougeName: Randy
-  dialougeText: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-    officia deserunt mollit anim id est laborum.
-  dialougeImage: {fileID: 0}
-  nextDialougeText: {fileID: 0}
+  Client: {fileID: 11400000, guid: b67de5b57f87fcf40bf94a96dd369366, type: 2}
+  dialougeText: "I\u2019ve got some basic supplies, but I don\u2019t really know
+    what I should be doing."
+  nextDialougeText: {fileID: 11400000, guid: 374315acfcb7ea446b79e41e82a8fd58, type: 2}

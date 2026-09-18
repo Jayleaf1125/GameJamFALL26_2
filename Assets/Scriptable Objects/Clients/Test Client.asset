@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cc3a1b7eb5b2448adbab9ea8b5c9ed, type: 3}
   m_Name: Test Client
   m_EditorClassIdentifier: Assembly-CSharp::ClientSO
-  <Name>k__BackingField: Jason
-  <Dialouge>k__BackingField: {fileID: 0}
+  <Name>k__BackingField: Mark
+  <Dialouge>k__BackingField: {fileID: 11400000, guid: d3292588f8e3c2143a592298b6ed9424, type: 2}
+  <Portrait>k__BackingField: {fileID: 1422348957624691013, guid: a598fe10bf410e34fa37f86e143269e6, type: 3}
   EventStatDict:
     _serializedList:
-    - Key: 0
-      Value: 1
     - Key: 1
-      Value: 2
+      Value: 3

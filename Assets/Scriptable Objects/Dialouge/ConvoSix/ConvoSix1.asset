@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4946147f2a2d4c449f7accdd87fd299, type: 3}
-  m_Name: ConvoOne_3
+  m_Name: ConvoSix1
   m_EditorClassIdentifier: Assembly-CSharp::DialougeSO
-  dialougeName: Randy
-  dialougeText: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-    dolore eu fugiat nulla pariatur.
-  dialougeImage: {fileID: 0}
-  nextDialougeText: {fileID: 11400000, guid: 2bd9b42abb16dd5468f76a4b2cceeeea, type: 2}
+  Client: {fileID: 11400000, guid: dfb1396931619d742af3b861c73bff5f, type: 2}
+  dialougeText: 'My cat slipped out while I was bringing some groceries inside. '
+  nextDialougeText: {fileID: 11400000, guid: f1e17f31651b55e43a208e23607c3e7b, type: 2}

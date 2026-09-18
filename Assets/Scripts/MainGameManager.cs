@@ -33,18 +33,33 @@ public class MainGameManager : Singleton<MainGameManager>
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void EndRound()
+    public void EndRound(List<VolunteerSO> volunteers)
     {
         Round += 1;
 
         foreach (VolunteerSO v in _listOfVolunteers)
         {
-            RestPeriodDict.Add(v, RestPeriodDict[v]+1);
+            if (v == volunteers[0]) { RestPeriodDict[v] = 0; continue; }
+            if (v == volunteers[1]) { RestPeriodDict[v] = 0; continue; }
+            EndRoundProcedure(v);
         }
 
         OnRoundEnd?.Invoke();
     }
+
+    void EndRoundProcedure(VolunteerSO volunteer)
+    {
+        RestPeriodDict[volunteer] += 1;
+
+        if (RestPeriodDict[volunteer] == 2)
+        {
+            volunteer.DecreaseBurnout();
+            RestPeriodDict[volunteer] = 0;
+        }
+    }
+
+
 }

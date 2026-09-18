@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Test Volunteer #4
   m_EditorClassIdentifier: Assembly-CSharp::VolunteerSO
   <Name>k__BackingField: Jermiah
-  <Portrait>k__BackingField: {fileID: -7875737279339245134, guid: 97e68b7577d12d147b4a1d899c3b0428, type: 3}
+  <Portrait>k__BackingField: {fileID: 21300000, guid: 068c5073055125d4e9120b455a46216c, type: 3}
   <Sight>k__BackingField: 1
   <Repair>k__BackingField: 0
   <Speed>k__BackingField: 2
   <Healing>k__BackingField: 1
   <Burnout>k__BackingField: 4
   <CurrentBurnout>k__BackingField: 0
+  <IsResting>k__BackingField: 1

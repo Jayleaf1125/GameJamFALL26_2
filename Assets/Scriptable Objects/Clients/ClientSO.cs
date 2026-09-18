@@ -1,6 +1,7 @@
 using UnityEngine;
 using AYellowpaper.SerializedCollections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public enum Stats
 {
@@ -15,6 +16,7 @@ public class ClientSO : ScriptableObject
 {
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public DialougeSO Dialouge { get; private set; }
+    [field: SerializeField] public Sprite Portrait { get; private set; }
     public SerializedDictionary<Stats, int> EventStatDict;
 
     private void OnValidate()
